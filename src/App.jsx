@@ -5,12 +5,31 @@ import Homepage from "./pages/Homepage";
 import PagenotFound from "./pages/PagenotFound";
 import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
+import CityList from "./components/CityList";
+import { useEffect, useState } from "react";
+
+const Base_URL = 'http://localhost:9000';
 
 function App() {
 
+  const [cities, setCities] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`${Base_URL}/cities`)
+      .then(response => response.json())
+      .then(data => {
+        setCities(data);
+        setLoading(false);
+      }) 
+      .catch( (error) => {
+        alert('Error fetching data', error);
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    
-    
       <BrowserRouter>
           <Routes>
               <Route path="/" element={<Homepage/>} />
@@ -18,8 +37,8 @@ function App() {
               <Route path="pricing" element={<Pricing/>} />
               <Route path="*" element={<PagenotFound/>} />
               <Route path="/app" element={<AppLayout/>}>
-                <Route index element={<p>COmida</p>} />
-                <Route path="cities" element={<PagenotFound/>} />
+                <Route index element={<CityList cities={cities} loading={loading} />} />
+                <Route path="cities" element={<CityList cities={cities} loading={loading} />} />
                 <Route path="countries" element={<PagenotFound/>} />
                 <Route path="form" element={<PagenotFound/>} />
               </Route>
