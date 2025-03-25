@@ -10,6 +10,7 @@ const AppLayout = () => {
         <div className={styles.app}>
             <SideBar />
             <Map />
+            
         </div>
         
   

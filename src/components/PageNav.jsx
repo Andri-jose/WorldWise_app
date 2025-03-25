@@ -7,7 +7,7 @@ function PageNav() {
     return (
         <nav className={styles.nav}>
             <div>
-                <Link to="/"> <Logo /> </Link>
+                <Logo /> 
             </div>
             <ul>
                 <li>
