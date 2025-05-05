@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 const CitiesContext = createContext();
 
@@ -7,6 +8,7 @@ const Base_URL = 'http://localhost:9000';
 function CitiesProvider({ children }) {   
     const [cities, setCities] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [currentCity, setCurrentCity] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -22,11 +24,33 @@ function CitiesProvider({ children }) {
             });
     }, []);
 
+    function getCity(id) {
+        setLoading(true);
+        fetch(`${Base_URL}/cities/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                setCurrentCity(data);
+                setLoading(false);
+            }) 
+            .catch( (error) => {
+                alert('Error fetching data by ID', error);
+                setLoading(false);
+            });
+    }
+
     return (
-        <CitiesContext.Provider value={{ cities, loading }}>
+        <CitiesContext.Provider value={{ cities, loading, currentCity, getCity}}>
             {children}
         </CitiesContext.Provider>
     );
 };
 
-export { CitiesProvider };
+function useCities() {
+    const context = useContext(CitiesContext);
+    if (!context) {
+        throw new Error('useCities must be used within a CitiesProvider');
+    }
+    return context;
+}
+
+export { CitiesProvider, useCities };
