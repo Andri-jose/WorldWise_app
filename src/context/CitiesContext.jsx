@@ -31,15 +31,17 @@ function CitiesProvider({ children }) {
             .then(data => {
                 setCurrentCity(data);
                 setLoading(false);
+                console.log(data);
             })
             .catch( (error) => {
-                alert('Error fetching data', error);
+                alert('Error fetching data by ID', error);
                 setLoading(false);
+                console.log(error);
             });
     }
 
     return (
-        <CitiesContext.Provider value={{ cities, loading, currentCity, getCityById }}>
+        <CitiesContext.Provider value={{ cities, loading, currentCity, getCityById, }}>
             {children}
         </CitiesContext.Provider>
     );
