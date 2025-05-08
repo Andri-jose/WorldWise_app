@@ -5,7 +5,7 @@ import CountryItem from './CountryItem';
 import Message from './Message';
 import { useCities } from '../context/CitiesContext';
 
-function CityList() {
+function CountryList() {
     const {cities, loading} = useCities();
     
     if(loading) return <Spinner />;
@@ -25,4 +25,4 @@ function CityList() {
     );
 };
 
-export default CityList;
+export default CountryList;
