@@ -6,6 +6,10 @@ import BackButton from "./BackButton";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 import Message from "./Message";
 import Spinner from "./Spinner";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useCities } from "../context/CitiesContext";
+import { useNavigate } from "react-router-dom";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -27,8 +31,11 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [emoji, setEmoji] = useState("");
   const [geoCodingError, setGeoCodingError] = useState("");
+  const {createCity, loading} = useCities();
+  const navigate = useNavigate();
 
   useEffect(function () {
+    if (!lat || !lng) return;
     async function fetchCountry() {
       try {
        setIsLoading(true);
@@ -53,12 +60,28 @@ function Form() {
     fetchCountry();
   }, [lat, lng]);
 
+
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!cityName || !date) return;
+    const newCity = { cityName, date, notes, country, emoji, position: { lat, lng } };
+    await createCity(newCity);
+    navigate("/app/cities");
+  };
+
+
+
   if (isLoading) return <Spinner />;
+
+  if (!lat || !lng) return <Message message="Click on the map to select a city" />;
 
   if(geoCodingError) return <Message message={geoCodingError} />;
 
+
+
   return (
-    <form className={styles.form}>
+    <form className={`${styles.form} ${loading ? styles.loading : ""}`} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -71,11 +94,7 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
-          id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-        />
+        <DatePicker id="date" onChange={date => setDate(date)} selected={date} dateFormat="dd/MM/yyyy"/>
       </div>
 
       <div className={styles.row}>
