@@ -35,13 +35,10 @@ const FAKE_USER = {
 };
 
 function AuthProvider({ children }) {
-
   const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
 
 
   const login = (email, password) => {
-    // Simulate a login process
-    // console.log(`Logging in with ${username} and ${password}`);
     if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "LOGIN", payload: { user: FAKE_USER } });
       console.log("Login successful");
@@ -63,10 +60,10 @@ function AuthProvider({ children }) {
 
 function useAuth() {
   const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
- 
+  // if (!context) {
+  //   throw new Error("useAuth must be used within an AuthProvider");
+  // }
+  return context;
 }
 
 export { AuthProvider, useAuth };
