@@ -24,7 +24,13 @@ const CityItem = ({city}) => {
     return (
         <li>
             <Link className={`${styles.cityItem} ${id === currentCity.id ? styles["cityItem--active"] : ""}`} to={`${id}?lat=${position.lat}&lng=${position.lng}`}>
-                <span className={styles.emoji}>{emoji}</span>
+                <span className={styles.emoji}>
+                    <img 
+                      src={emoji} 
+                      alt={`${cityName} flag`} 
+                      style={{ width: '50px', height: 'auto' }} 
+                    />
+                </span>
                 <h3 className={styles.cityName}>{cityName}</h3>
                 <time className={styles.date}>{formatDate(date)}</time>
                 <button className={styles.deleteBtn} onClick={handleDelete}>&times;</button>
