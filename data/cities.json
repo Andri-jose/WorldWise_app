@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "id": "a553",
+      "cityName": "Porlamar",
+      "date": "2025-05-12T13:39:59.680Z",
+      "notes": "",
+      "country": "Venezuela (Bolivarian Republic of)",
+      "emoji": "🇻🇪",
+      "position": {
+        "lat": "10.957616468947451",
+        "lng": "-63.84692961485067"
+      }
+    },
+    {
+      "id": "e787",
+      "cityName": "La Plaza Paraguachi",
+      "date": "2025-05-12T13:40:09.343Z",
+      "notes": "",
+      "country": "Venezuela (Bolivarian Republic of)",
+      "emoji": "🇻🇪",
+      "position": {
+        "lat": "11.150392632129611",
+        "lng": "-63.88446564506838"
+      }
+    },
+    {
+      "id": "990a",
+      "cityName": "San Carlos de Bariloche",
+      "date": "2025-05-12T13:40:37.037Z",
+      "notes": "",
+      "country": "Argentina",
+      "emoji": "🇦🇷",
+      "position": {
+        "lat": "-41.18513028637702",
+        "lng": "-71.29325555480985"
+      }
+    },
+    {
+      "id": "a497",
+      "cityName": "Trizac",
+      "date": "2025-05-17T03:28:55.570Z",
+      "notes": "",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "position": {
+        "lat": "45.23540718343113",
+        "lng": "2.555996545558506"
+      }
+    }
+  ]
+}
