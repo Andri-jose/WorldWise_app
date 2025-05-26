@@ -7,5 +7,8 @@ const isGitHubPages = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   base: isGitHubPages ? '/WorldWise_app/' : '/',
+   build: {
+    outDir: 'docs', // 👈 This tells Vite to output to /docs instead of /dist
+  },
   plugins: [react(), eslint()],
 });
