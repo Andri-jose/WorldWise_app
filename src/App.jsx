@@ -19,7 +19,7 @@ function App() {
   return (
     <CitiesProvider>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/WorldWise_app">
             <Routes>
                 <Route path="/" element={<Homepage/>} />
                 <Route path="product" element={<Product/>} />
