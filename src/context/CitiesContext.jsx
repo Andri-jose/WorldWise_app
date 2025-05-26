@@ -70,6 +70,7 @@ function CitiesProvider({ children }) {
         dispatch({ type: "city/loaded", payload: formatted });
       })
       .catch(error => {
+        console.error("Fetch failed:", error);
         dispatch({ type: "rejected", payload: "There was an error loading data." });
       });
   }, []);
@@ -84,7 +85,7 @@ function CitiesProvider({ children }) {
         dispatch({ type: "rejected", payload: "City already exists." });
         return;
       }
-  
+     
       try {
         // 🌍 Fetch flag for this country from REST Countries API
         const response = await fetch(`https://restcountries.com/v3.1/name/${newCity.country}`);
@@ -93,7 +94,7 @@ function CitiesProvider({ children }) {
     
         const data = {
           ...newCity,
-          id: crypto.randomUUID(),
+          id: Math.random().toString(36).substring(2, 9),
           date: new Date().toISOString(),
           emoji: country?.flags?.png || "",  // ✅ Add flag image
           position: newCity.position || { lat: null, lng: null },
@@ -102,6 +103,7 @@ function CitiesProvider({ children }) {
         dispatch({ type: "city/created", payload: data });
     
       } catch {
+        console.error("Fetch failed:", error);
         dispatch({ type: "rejected", payload: "There was an error creating city." });
       }
     }
