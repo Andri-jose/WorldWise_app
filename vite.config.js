@@ -7,7 +7,7 @@ import eslint from 'vite-plugin-eslint';
 export default defineConfig({
   base: '/WorldWise_app/',
    build: {
-    outDir: 'docs', // 👈 This tells Vite to output to /docs instead of /dist
+    outDir: 'docs', //
   },
   plugins: [react(), eslint()],
 });

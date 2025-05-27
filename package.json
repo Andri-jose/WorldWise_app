@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "homepage": "https://andri-jose.github.io/WorldWise_app/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "eslint-config-react-app": "^7.0.1",
