@@ -6,8 +6,9 @@ export default function Homepage() {
   return (
     <main className={styles.homepage}>
 
-      <PageNav />
-
+      <header>
+        <PageNav />
+      </header>
 
       <section>
         <h1>

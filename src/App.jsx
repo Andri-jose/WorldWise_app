@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom"
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom"
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
 import Homepage from "./pages/Homepage";
@@ -19,7 +19,7 @@ function App() {
   return (
     <CitiesProvider>
       <AuthProvider>
-        <BrowserRouter basename="/WorldWise_app">
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Homepage/>} />
                 <Route path="/product" element={<Product/>} />
@@ -37,7 +37,7 @@ function App() {
                 </Route>
                 <Route path="*" element={<PagenotFound/>} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AuthProvider>
     </CitiesProvider>
   );
