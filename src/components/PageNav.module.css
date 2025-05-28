@@ -52,6 +52,7 @@ a.ctaLink:visited {
 }
 
 /* Responsive styles */
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -93,14 +94,14 @@ a.ctaLink:visited {
 }
 }
 
-@media (min-width: 1450px) {
+/* @media (min-width: 1450px) {
    .nav a:link,
    .nav a:visited {
     font-size: 5rem;
     padding: 4rem;
   }
 
-};  
+};   */
 
 @media screen and (max-width: 1449px) and (min-width: 1025px) {
   .nav a:link,

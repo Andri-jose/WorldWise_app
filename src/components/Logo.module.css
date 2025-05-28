@@ -6,7 +6,7 @@
 
 
 /* RESPONSIVE STYLES */
-@media (max-width: 1449px) {
+@media (min-width: 769px) {
   .logo {
   height: 3.5rem;
 }
@@ -25,14 +25,14 @@
 }
 }
 
-@media  (min-width: 1450px) {
+/* @media  (min-width: 1450px) {
   .logo {
   height: 12rem;
 }
-};  
+};   */
 
-/* @media screen and (max-width: 1449px) and (min-width: 1025px) {
+@media screen and (max-width: 1449px) and (min-width: 1025px) {
   .logo {
     height: 5rem;
-  } */
-}
+  }
+ }

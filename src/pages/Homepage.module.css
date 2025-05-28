@@ -39,6 +39,7 @@
 
 
 /* RESPONSIVE STYLES */
+
 @media (max-width: 1024px) {
   .homepage {
     padding: 2rem 3rem;
@@ -88,7 +89,7 @@
   }
 }
 
-@media (min-width: 1450px) {
+/* @media (min-width: 1450px) {
   .homepage {
     padding: 6rem 12rem;
   }
@@ -101,4 +102,4 @@
   .homepage h2 {
     font-size: 6rem;
   }
-};  
+};   */
