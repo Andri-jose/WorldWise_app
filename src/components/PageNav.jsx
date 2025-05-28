@@ -1,27 +1,39 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./PageNav.module.css";
 import Logo from "../components/Logo";
 
 function PageNav() {
-    return (
-        <nav className={styles.nav}>
-            <div>
-                <Logo />  
-            </div>
-            <ul>
-                <li>
-                    <NavLink to="/pricing">Pricing</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/product">Product</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/login" className={styles.ctaLink}>Login</NavLink>
-                </li>
-            </ul>
-        </nav>
-    );
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default PageNav; 
+  return (
+    <nav className={styles.nav}>
+      <div className={styles.logoAndToggle}>
+        <Logo />
+        <button
+          className={styles.hamburger}
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <ul className={`${styles.navList} ${isOpen ? styles.showMenu : ""}`}>
+        <li>
+          <NavLink to="/pricing">Pricing</NavLink>
+        </li>
+        <li>
+          <NavLink to="/product">Product</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" className={styles.ctaLink}>
+            Login
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+ 
+export default PageNav;

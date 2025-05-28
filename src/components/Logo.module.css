@@ -1,3 +1,31 @@
 .logo {
   height: 5.2rem;
 }
+
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .logo {
+  height: 3.5rem;
+}
+
+}
+
+@media (max-width: 768px) {
+  .logo {
+  height: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+  .logo {
+  height: 1.8rem;
+}
+}
+
+@media (min-width: 1450px) {
+  .logo {
+  height: 12rem;
+}
+};  

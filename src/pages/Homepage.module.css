@@ -32,3 +32,72 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+.homepage header {
+  margin-bottom: 5rem;
+}
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .homepage {
+    padding: 2rem 3rem;
+  }
+
+  .homepage h1 {
+    font-size: 3.5rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 1.5rem 2rem;
+    margin: 1.5rem;
+  }
+
+  .homepage h1 {
+    font-size: 2.8rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .homepage h1 {
+    font-size: 2rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.1rem;
+  }
+
+  .homepage section {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  .homepage {
+    padding: 6rem 12rem;
+  }
+
+  .homepage h1 {
+    font-size: 14rem;
+    margin-bottom: 3rem;
+  }
+
+  .homepage h2 {
+    font-size: 6rem;
+  }
+};  
