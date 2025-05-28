@@ -1,5 +1,6 @@
 .logo {
   height: 5.2rem;
+  padding-right: 2rem;
 }
 
 
@@ -24,8 +25,14 @@
 }
 }
 
-@media (min-width: 1450px) {
+@media  (min-width: 1450px) {
   .logo {
   height: 12rem;
 }
 };  
+
+@media screen and (max-width: 1449px) and (min-width: 1025px) {
+  .logo {
+    height: 5rem;
+  }
+}

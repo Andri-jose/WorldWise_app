@@ -6,8 +6,8 @@ import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
   base: '/WorldWise_app/',
-   build: {
-    outDir: 'docs', //
-  },
+  //  build: {
+  //   outDir: 'docs', //
+  // },
   plugins: [react(), eslint()],
 });
