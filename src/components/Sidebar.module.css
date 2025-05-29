@@ -17,3 +17,29 @@
   font-size: 1.2rem;
   color: var(--color-light--1);
 }
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    flex-basis: 32rem;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: 100%;
+    height: auto;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    flex-basis: 100%;
+    height: auto;
+    padding: 0.5rem;
+    min-width: 0;
+  }
+}

@@ -4,11 +4,9 @@ import PageNav from "../components/PageNav";
 export default function Product() {
   return (
     <main className={styles.product}>
-
-      <header>
+      
         <PageNav />
-      </header>
-
+    
       <section>
         <img
           src="img-1.jpg"

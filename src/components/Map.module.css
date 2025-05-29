@@ -36,3 +36,42 @@
 :global(.leaflet-popup-content-wrapper) {
   border-left: 5px solid var(--color-brand--2);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mapContainer {
+    min-height: 300px;
+    padding: 0.5rem;
+  }
+  .map {
+    min-height: 250px;
+  }
+  :global(.leaflet-popup .leaflet-popup-content) {
+    font-size: 1.2rem;
+  }
+  :global(.leaflet-popup .leaflet-popup-content span:first-child) {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapContainer {
+    min-height: 200px;
+    padding: 0.2rem;
+  }
+
+  .mapContainer Button{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -8rem;
+  }
+  .map {
+    min-height: 150px;
+  }
+  :global(.leaflet-popup .leaflet-popup-content) {
+    font-size: 1rem;
+  }
+  :global(.leaflet-popup .leaflet-popup-content span:first-child) {
+    font-size: 1.5rem;
+  }
+}
