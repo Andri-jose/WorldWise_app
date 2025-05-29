@@ -5,8 +5,9 @@ export default function Product() {
   return (
     <main className={styles.product}>
 
-      <PageNav />
-
+      <header>
+        <PageNav />
+      </header>
 
       <section>
         <img
