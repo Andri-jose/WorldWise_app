@@ -56,18 +56,20 @@
 
 @media (max-width: 480px) {
   .mapContainer {
-    min-height: 200px;
+    /* min-height: 200px; */
     padding: 0.2rem;
+    
   }
 
   .mapContainer Button{
     position: absolute;
     bottom: 0;
-    margin-bottom: -8rem;
+    /* margin-bottom: -8rem; */
+    
   }
-  .map {
-    min-height: 150px;
-  }
+  /* .map {
+    min-height: 50rem;
+  } */
   :global(.leaflet-popup .leaflet-popup-content) {
     font-size: 1rem;
   }

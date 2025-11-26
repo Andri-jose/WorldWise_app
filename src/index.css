@@ -34,16 +34,16 @@ body {
 }
 
 label {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.8rem 1.2rem;
+  padding: 0.4rem 1.2rem;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   background-color: var(--color-light--3);
@@ -67,6 +67,12 @@ input:focus {
   padding: 1rem 3rem;
   border-radius: 5px;
  
+}
+
+@media (max-width: 1067px) {
+  label {
+    font-size: 1rem;
+  }
 }
 
 /* @media (min-width: 1450px) {

@@ -35,7 +35,7 @@
   text-decoration: none;
   color: var(--color-light--2);
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -60,7 +60,7 @@ a.ctaLink:visited {
 
   .navList {
     position: absolute;
-    top: 50%;
+    top: 90%;
     right: 0;
     background-color: var(--color-dark--1);
     flex-direction: column;
@@ -81,7 +81,9 @@ a.ctaLink:visited {
 }
 
 @media (max-width: 375px) {
-
+.navList {
+    top: 45%;
+}
   .logoAndToggle {
   margin-bottom: 5rem;
 }
@@ -91,6 +93,13 @@ a.ctaLink:visited {
 
   .logoAndToggle {
   margin-bottom: 5rem;
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+  .navList {
+  top: 90%;
 }
 }
 
@@ -106,7 +115,7 @@ a.ctaLink:visited {
 @media screen and (max-width: 1449px) and (min-width: 1025px) {
   .nav a:link,
    .nav a:visited {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   }

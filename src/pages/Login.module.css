@@ -10,13 +10,12 @@
   background-color: var(--color-dark--2);
   border-radius: 7px;
   padding: 2rem 3rem;
-  width: 100%;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
   /* Different from other form */
-  width: 48rem;
+  width: 33rem;
   margin: 8rem auto;
 }
 
@@ -35,7 +34,7 @@
   }
 
   .form {
-    width: 100%;
+    width: 33rem;
     padding: 1.5rem 1rem;
     margin: 4rem auto;
   }
