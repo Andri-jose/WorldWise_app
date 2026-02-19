@@ -19,13 +19,13 @@
 
 .city h6 {
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: .8rem;
   font-weight: 900;
   color: var(--color-light--1);
 }
 
 .city h3 {
-  font-size: 1.9rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -37,11 +37,11 @@
 }
 
 .city p {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 .city a:link,
 .city a:visited {
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--color-brand--1);
 }

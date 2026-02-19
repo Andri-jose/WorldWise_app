@@ -47,7 +47,7 @@ a.ctaLink:link,
 a.ctaLink:visited {
   background-color: var(--color-brand--2);
   color: var(--color-dark--0);
-  padding: 0.8rem 2rem;
+  padding: 0.4rem .8rem;
   border-radius: 7px;
 }
 
@@ -112,10 +112,10 @@ a.ctaLink:visited {
 
 };   */
 
-@media screen and (max-width: 1449px) and (min-width: 1025px) {
+/* @media screen and (max-width: 1449px) and (min-width: 1025px) {
   .nav a:link,
    .nav a:visited {
     font-size: 1.3rem;
   }
 
-  }
+  } */

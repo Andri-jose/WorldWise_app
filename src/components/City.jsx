@@ -38,7 +38,7 @@ function City() {
           <img 
             src={emoji} 
             alt={`${cityName} flag`} 
-            style={{ width: '80px', height: 'auto' }} 
+            style={{ width: '60px', height: 'auto' }} 
           />
           </span> {cityName}
         </h3>

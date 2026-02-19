@@ -22,7 +22,7 @@ const CityItem = ({city}) => {
     }
   
     return (
-        <li>
+        <li className={styles.listItem}>
             <Link className={`${styles.cityItem} ${id === currentCity.id ? styles["cityItem--active"] : ""}`} to={`${id}?lat=${position.lat}&lng=${position.lng}`}>
                 <span className={styles.emoji}>
                     <img 
@@ -32,9 +32,12 @@ const CityItem = ({city}) => {
                     />
                 </span>
                 <h3 className={styles.cityName}>{cityName}</h3>
-                <time className={styles.date}>{formatDate(date)}</time>
-                <button className={styles.deleteBtn} onClick={handleDelete}>&times;</button>
+                <div className={styles.dateContainer}>
+                    <time className={styles.date}>{formatDate(date)}</time>
+                </div>
+                
             </Link>
+            <button className={styles.deleteBtn} onClick={handleDelete}>&times;</button>
         </li>
     );
 };
